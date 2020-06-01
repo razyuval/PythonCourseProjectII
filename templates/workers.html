@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>workers</title>
+</head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<body>
+<h1>Workers Data</h1>
+<table>
+<tr  style="font-weight:bold" >
+    <td>emp_id</td>
+    <td>first_name</td>
+    <td>last_name</td>
+    <td>email</td>
+    <td>phone_number</td>
+    <td>hire_date</td>
+    <td>job</td>
+    <td>salary</td>
+    <td>commision_pct</td>
+    <td>manager_id</td>
+    <td>department</td>
+</tr>
+    {% for worker in workers %}
+<tr>
+    <td>{{worker.emp_id}}</td>
+    <td>{{worker.first_name}}</td>
+    <td>{{worker.last_name}}</td>
+    <td>{{worker.email}}</td>
+    <td>{{worker.phone_number}}</td>
+    <td>{{worker.hire_date}}</td>
+    <td>{{worker.job}}</td>
+    <td>{{worker.salary}}</td>
+    <td>{{worker.commision_pct}}</td>
+    <td>{{worker.manager_id}}</td>
+    <td>{{worker.department}}</td>
+</tr>
+    {% endfor %}
+</table>
+</body>
+</html>

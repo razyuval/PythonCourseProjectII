@@ -16,6 +16,9 @@ class Departments(models.Model):
         managed = False
         db_table = 'departments'
 
+    def __str__(self):
+        return self.dept_name
+
 
 class Jobs(models.Model):
     job_id = models.AutoField(primary_key=True)
@@ -25,6 +28,9 @@ class Jobs(models.Model):
     class Meta:
         managed = False
         db_table = 'jobs'
+
+    def __str__(self):
+        return self.job_title
 
 
 class Employees(models.Model):
@@ -45,5 +51,6 @@ class Employees(models.Model):
         managed = False
         db_table = 'employees'
 
-
+    def __str__(self):
+        return self.emp_id
 
