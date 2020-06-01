@@ -38,9 +38,6 @@ for emp in emps:
     if diff.years > 1 and emp['salary'] < average_salary:
         emp_list.append(emp)
 print(emp_list)
-#
-# with open('emp', 'w') as json_file:
-#     json.dump(emp_list, json_file, indent=2)
 
 emp_df = pd.DataFrame(emp_list)
 emp_df.to_csv('emp.csv',index=False)
